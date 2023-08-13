@@ -160,7 +160,7 @@
             bottom: 20px;
             right: 20px;
             padding: 10px 20px;
-            background-color: #1a3b70;
+            background-color: #f5a623;
             color: #fff;
             border: none;
             border-radius: 5px;
@@ -169,6 +169,47 @@
         }
 
         #scrollTopBtn:hover {
+            opacity: 0.8;
+        }
+
+        /* Dark Mode Styles */
+        body.dark-mode, html.dark-mode {
+            background: #121212;
+            color: #ffffff;
+        }
+
+        body.dark-mode #homepage {
+            background-color: rgba(26, 59, 112, 0.8);
+        }
+
+        body.dark-mode section {
+            background-color: rgba(18, 18, 18, 0.9);
+            color: #ffffff;
+        }
+
+        body.dark-mode section h2, body.dark-mode #summary h2, body.dark-mode #education h2, body.dark-mode #experience h2, body.dark-mode #projects h2 {
+            color: #f5a623;
+        }
+
+        body.dark-mode footer {
+            background-color: #1a3b70;
+        }
+
+        #darkModeToggle {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            padding: 10px 20px;
+            background-color: #f5a623;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: opacity 0.3s;
+            z-index: 1000;
+        }
+
+        #darkModeToggle:hover {
             opacity: 0.8;
         }
     </style>
@@ -298,7 +339,7 @@
         <section id="certifications">
             <h2>Certifications</h2>
             <p>Details about certifications will go here.</p>
-            <!-- To be added here. -->
+            <!-- To be added later -->
         </section>
 
     <footer>
@@ -306,6 +347,9 @@
             © 2023 Amin Arshadi. All rights reserved.
         </div>
     </footer>
+
+    <!-- Dark Mode Toggle Button -->
+    <button id="darkModeToggle" onclick="toggleDarkMode()">Turn Dark Mode On</button>
 
     <script>
         window.onscroll = function() {scrollFunction()};
@@ -321,6 +365,18 @@
         function scrollToTop() {
             document.body.scrollTop = 0; // For Safari
             document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        }
+
+        // Dark Mode Toggle Function
+        function toggleDarkMode() {
+            const body = document.body;
+            if (body.classList.contains('dark-mode')) {
+                body.classList.remove('dark-mode');
+                document.getElementById("darkModeToggle").innerText = "Turn Dark Mode On";
+            } else {
+                body.classList.add('dark-mode');
+                document.getElementById("darkModeToggle").innerText = "Turn Dark Mode Off";
+            }
         }
     </script>
 
