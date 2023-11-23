@@ -195,6 +195,11 @@
             background-color: #1a3b70;
         }
 
+        body.dark-mode .timeline-content {
+            background-color: black;
+            color: white;
+        }
+
         #darkModeToggle {
             position: fixed;
             top: 10px;
@@ -212,6 +217,65 @@
         #darkModeToggle:hover {
             opacity: 0.8;
         }
+
+        #timeline {
+            padding: 50px 0;
+            text-align: center;
+            position: relative;
+            min-height: 400px;
+        }
+
+        .timeline {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 10px 0;
+            overflow-x: auto;
+        }
+
+        .timeline-item {
+            position: relative;
+            cursor: pointer;
+            margin: 0 10px;
+        }
+
+        .timeline-date {
+            display: inline-block;
+            padding: 5px 10px;
+            background-color: #1a3b70;
+            color: #fff;
+            border-radius: 5px;
+            text-align: center;
+            font-size: 0.9em;
+            transition: background-color 0.3s, color 0.3s;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .timeline-content h3, .timeline-content p {
+            text-align: center;
+        }
+
+        .timeline-content {
+            display: none;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 50px;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+            width: 90%;
+            max-width: 900px;
+            margin: 20px auto;
+            text-align: left;
+        }
+
+        .timeline-date:hover {
+            background-color: #f5a623;
+            color: #000;
+        }
+
+        li {
+            margin-bottom: 0.5em;
+        }
     </style>
 
 </head>
@@ -227,12 +291,79 @@
             <a href="https://www.linkedin.com/in/amin1410arshadi" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
         </p>
         <nav>
+            <a href="#experience">Experience</a>
             <a href="#summary">Summary</a>
             <a href="#education">Education</a>
-            <a href="#experience">Experience</a>
             <a href="#projects">Projects</a>
             <a href="#certifications">Certifications</a>
         </nav>
+    </section>
+
+    <!-- Work Experience -->
+    <section id="experience">
+        <h2>Work Experience</h2>
+        <div class="timeline">
+            <div class="timeline-item" data-content="content-5">
+                <span class="timeline-date">Jun 2021 – Sep 2021</span>
+            </div>
+            <div class="timeline-item" data-content="content-4">
+                <span class="timeline-date">Oct 2021 – Feb 2022</span>
+            </div>
+            <div class="timeline-item" data-content="content-3">
+                <span class="timeline-date">May 2022 – Sep 2022</span>
+            </div>
+            <div class="timeline-item" data-content="content-2">
+                <span class="timeline-date">Jan 2023 – May 2023</span>
+            </div>
+            <div class="timeline-item" data-content="content-1">
+                <span class="timeline-date">Sep 2023 – Dec 2023</span>
+            </div>
+        </div>
+        <div class="timeline-content" id="content-5">
+            <h3>Python Developer - HANECS GmbH</h3>
+            <p>Ottawa, Ontario, Canada</p>
+            <ul>
+                <li>Developed Python for Automotive educational package offered by HANECS GmbH (<a href="https://www.hanecs.de/en/academy-en/" target="_blank">https://www.hanecs.de/en/academy-en/</a>).</li>
+                <li>Applied university-level problem-solving skills, including Dijkstra, Prime/Jarnik, and Kruskal algorithms, to find solutions to a real-life mapping problem, resulting in a 60% reduction in the program running time and a 30% improvement in overall software efficiency and accuracy.</li>
+                <li>Conducted extensive testing and debugging, reducing the number of bugs and errors by 30% and improving overall software stability by 20%.</li>
+            </ul>
+        </div>
+        <div class="timeline-content" id="content-4">
+            <h3>Security Software Developer - HANECS GmbH</h3>
+            <p>Ottawa, Ontario, Canada</p>
+            <ul>
+                <li>Contributed to the development of the "Cybersecurity for Automotive" educational package offered by HANECS GmbH, which saw a 25% increase in student enrolment and a 10% improvement in student retention rates compared to previous offerings.</li>
+                <li>Collaborated with team members to integrate both symmetric and asymmetric cryptography algorithms, including DES, AES, RSA, ECC, and SHF, which improved data encryption and decryption by up to 75% and ensured compliance with industry standards.</li>
+                <li>Successfully delivered the software products within budget constraints, contributing to the overall success of the project and receiving commendations from both management and clients.</li>
+            </ul>
+        </div>
+        <div class="timeline-content" id="content-3">
+            <h3>Software Engineer - Ross Video Limited</h3>
+            <p>Ottawa, Ontario, Canada</p>
+            <ul>
+                <li>Worked with Python-based automation frameworks (mainly Robot) and libraries to automate test cases for Ross Video’s products (Gator-Sync, MC1-UHD, and Switcher), resulting in a 20% increase in overall software performance and a 25% reduction in software bugs.</li>
+                <li>Reduced the running time of a program to capture frames on Gator-Sync from 10 to 2.4 seconds per frame, resulting in a 30% decrease in resource utilization.</li>
+                <li>Designed and developed a robust image defect detection model, enabling the identification and saving of images with defects to the network for further analysis, and debugging, which improved overall software stability by 45% and reduced the number of defects by 50%.</li>
+                <li>Streamlined test execution, reporting, and debugging by executing test plans, reporting bugs, and verifying fixes to ensure timely and accurate delivery of high-quality software products.</li>
+            </ul>
+        </div>
+        <div class="timeline-content" id="content-2">
+            <h3>Linux Software Engineer - Ross Video Limited</h3>
+            <p>Ottawa, Ontario, Canada</p>
+            <ul>
+                <li>Built customized Linux-based operating systems for embedded systems and automated the build process with tools such as FPGA and Make.</li>
+                <li>Transferred PhabrixQX’s audio and video functionalities to Ross Video's MC1-UHD product, reducing the cost by over $8,000 per unit.</li>
+                <li>Developed the functionalities of RossTalk (a text-based protocol that allows control of the Switcher from an external device).</li>
+            </ul>
+        </div>
+        <div class="timeline-content" id="content-1">
+            <h3>Software Engineer - Cisco Systems</h3>
+            <p>Kanata, Ontario, Canada</p>
+            <ul>
+                <li>Leveraged an internal Cisco API to engineer a feature enhancement for Cat9k Cisco devices running IOS-XE, as requested by Amazon, transitioning from CLI (string commands) to Netconf (XML commands) for dispatching RPC configuration commands. This transition enabled the dispatch of RPC CLI commands to the device, a functionality not previously available, increasing command transmission success rate by 15% and reducing configuration time by 20%.</li>
+                <li>Enhanced Cisco FRAMQ Web UI by leading the design and development of a label run analysis feature. This initiative improved user experience through intuitive integration with the automation reporting tool, driving a 10% increase in system efficiency and reducing manual intervention by 20%.</li>
+            </ul>
+        </div>
     </section>
 
     <!-- Summary Section -->
@@ -277,50 +408,6 @@
             <p>Intro to Computing I, Intro to Computing II, Digital Systems I, Data Structures and Algorithms, Intro to Software Engineering, Computer Architecture I, Discrete Structures, Programming Paradigms, Statistics for Engineers, Advances Programming concepts with C++, Design Analysis Algorithms I, Programming Languages Concepts, Intro to Formal Languages, Operating Systems, Intro to Data Communication and Networking</p>
         </section>
     </div>
-
-    <!-- Work Experience Section -->
-    <section id="experience">
-        <h2>Work Experience</h2>
-        <h3>Software Engineer, Cisco, Kanata, ON</h3>
-        <p>September / 2023 – December / 2023</p>
-        <ul>
-            <li>Leveraged an internal Cisco API to engineer a feature enhancement for Cat9k Cisco devices running IOS-XE, as requested by Amazon, transitioning from CLI (string commands) to Netconf (XML commands) for dispatching RPC configuration commands. This transition enabled the dispatch of RPC CLI commands to the device, a functionality not previously available, increasing command transmission success rate by 15% and reducing configuration time by 20%.</li>
-            <li>Enhanced Cisco FRAMQ Web UI by leading the design and development of a label run analysis feature. This initiative improved user experience through intuitive integration with the automation reporting tool, driving a 10% increase in system efficiency and reducing manual intervention by 20%.</li>
-        </ul>
-        
-        <h3>Linux Software Engineer, Ross Video Limited, Ottawa, ON</h3>
-        <p>January / 2023 – May / 2023</p>
-        <ul>
-            <li>Built customized Linux-based operating systems for embedded systems and automated the build process with tools such as FPGA and Make.</li>
-            <li>Transferred PhabrixQX’s audio and video functionalities to Ross Video's MC1-UHD product, reducing the cost by over $8,000 per unit.</li>
-            <li>Developed the functionalities of RossTalk (a text-based protocol that allows control of the Switcher from an external device).</li>
-        </ul>
-
-        <h3>Software Engineer, Ross Video Limited, Ottawa, ON</h3>
-        <p>May / 2022 – September / 2022</p>
-        <ul>
-            <li>Worked with Python-based automation frameworks (mainly Robot) and libraries to automate test cases for Ross Video’s products (Gator-Sync, MC1-UHD, and Switcher), resulting in a 20% increase in overall software performance and a 25% reduction in software bugs.</li>
-            <li>Reduced the running time of a program to capture frames on Gator-Sync from 10 to 2.4 seconds per frame, resulting in a 30% decrease in resource utilization.</li>
-            <li>Designed and developed a robust image defect detection model, enabling the identification and saving of images with defects to the network for further analysis, and debugging, which improved overall software stability by 45% and reduced the number of defects by 50%.</li>
-            <li>Streamlined test execution, reporting, and debugging by executing test plans, reporting bugs, and verifying fixes to ensure timely and accurate delivery of high-quality software products.</li>
-        </ul>
-
-        <h3>Security Software Developer, HANECS GmbH, Ottawa, ON</h3>
-        <p>October / 2021 – February / 2022</p>
-        <ul>
-            <li>Contributed to the development of the "Cybersecurity for Automotive" educational package offered by HANECS GmbH, which saw a 25% increase in student enrolment and a 10% improvement in student retention rates compared to previous offerings.</li>
-            <li>Collaborated with team members to integrate both symmetric and asymmetric cryptography algorithms, including DES, AES, RSA, ECC, and SHF, which improved data encryption and decryption by up to 75% and ensured compliance with industry standards.</li>
-            <li>Successfully delivered the software products within budget constraints, contributing to the overall success of the project and receiving commendations from both management and clients.</li>
-        </ul>
-
-        <h3>Python Developer, HANECS GmbH, Ottawa, ON</h3>
-        <p>June / 2021 – September / 2021</p>
-        <ul>
-            <li>Developed Python for Automotive educational package offered by HANECS GmbH (<a href="https://www.hanecs.de/en/academy-en/" target="_blank">https://www.hanecs.de/en/academy-en/</a>).</li>
-            <li>Applied university-level problem-solving skills, including Dijkstra, Prime/Jarnik, and Kruskal algorithms, to find solutions to a real-life mapping problem, resulting in a 60% reduction in the program running time and a 30% improvement in overall software efficiency and accuracy.</li>
-            <li>Conducted extensive testing and debugging, reducing the number of bugs and errors by 30% and improving overall software stability by 20%.</li>
-        </ul>
-    </section>
 
     <!-- Projects Section -->
     <section id="projects">
@@ -389,6 +476,31 @@
                 document.getElementById("darkModeToggle").innerText = "Turn Dark Mode Off";
             }
         }
+
+        document.addEventListener('DOMContentLoaded', (event) => {
+            let currentActiveContentId = null;
+
+            document.querySelectorAll('.timeline-item').forEach(item => {
+                item.addEventListener('click', () => {
+                    const id = item.getAttribute('data-content');
+
+                    // Hide currently displayed content, if any
+                    if (currentActiveContentId && currentActiveContentId !== id) {
+                        document.getElementById(currentActiveContentId).style.display = 'none';
+                    }
+
+                    // Toggle display of clicked item's content
+                    const contentDiv = document.getElementById(id);
+                    if (contentDiv.style.display === 'block') {
+                        contentDiv.style.display = 'none';
+                        currentActiveContentId = null;
+                    } else {
+                        contentDiv.style.display = 'block';
+                        currentActiveContentId = id;
+                    }
+                });
+            });
+        });
     </script>
 
     <!-- Scroll to Top Button -->
