@@ -30,7 +30,7 @@
         }
 
         #homepage {
-            background-color: rgba(26, 59, 112, 0.8);
+            background-color: black;
             color: #fff;
             text-align: center;
             padding: 50px 0;
@@ -78,8 +78,9 @@
             transition: transform 0.3s;
         }
 
-        section:hover {
-            transform: translateY(-5px);
+        #experience:hover, #summary:hover, #education:hover, #projects:hover, #certifications:hover {
+            transform: translateY(-8px);
+            transition: transform 0.8s;
         }
 
         section::before {
@@ -89,7 +90,6 @@
             left: 0;
             right: 0;
             height: 10px;
-            background: linear-gradient(90deg, #1a3b70, #f5a623, #1a3b70);
         }
 
         section h2, #summary h2, #education h2, #experience h2, #projects h2 {
@@ -182,18 +182,23 @@
             opacity: 0.8;
         }
 
+        #experience {
+            height: 600px;
+            overflow-y: auto;
+        }
+
         /* Dark Mode Styles */
         body.dark-mode, html.dark-mode {
-            background: #121212;
+            background: #191717;
             color: #ffffff;
         }
 
         body.dark-mode #homepage {
-            background-color: rgba(26, 59, 112, 0.8);
+            background-color: #191717;
         }
 
         body.dark-mode section {
-            background-color: rgba(18, 18, 18, 0.9);
+            background-color: black;
             color: #ffffff;
         }
 
@@ -202,12 +207,13 @@
         }
 
         body.dark-mode footer {
-            background-color: #1a3b70;
+            background-color: #191717;
         }
 
         body.dark-mode .timeline-content {
             background-color: black;
             color: white;
+            border-top: 1.5px dashed #f5a623;
         }
 
         #darkModeToggle {
@@ -286,6 +292,11 @@
         li {
             margin-bottom: 0.5em;
         }
+
+        li a {
+            cursor: pointer;
+        }
+        
     </style>
 
 </head>
@@ -450,7 +461,7 @@
 
     <footer>
         <div class="container">
-            © 2024 Amin Arshadi. All rights reserved.
+            © 2023 Amin Arshadi. All rights reserved.
         </div>
     </footer>
 
